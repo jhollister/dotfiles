@@ -130,3 +130,6 @@ set splitright
 " Remap for long lines
 nnoremap k gk
 nnoremap j gj
+
+" command to remove trailing spaces from file
+command ClearTrailing %s/\s\+$//e
