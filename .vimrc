@@ -15,9 +15,11 @@ Plug 'vim-airline/vim-airline'
 Plug 'tpope/vim-surround'
 Plug 'roman/golden-ratio'
 Plug 'christoomey/vim-tmux-navigator'
+Plug 'jremmen/vim-ripgrep'
 
 " Open vimwiki with <Leader>ww
 Plug 'vimwiki/vimwiki'
+Plug 'tools-life/taskwiki'
 
 " Comment out lines with <Leader>cc
 " Toggle comments with <Leader>c<space>
@@ -47,9 +49,10 @@ let g:vimwiki_list = [{'path': '~/wiki/', 'syntax': 'markdown', 'ext': '.md'}]
 "make folds save
 autocmd BufWinLeave *.* mkview
 autocmd BufWinEnter *.* silent loadview
-"load folds with F6 if the above doesn't work. Usually because of plugins
-map <f6> :loadview<CR>
 
+"load folds with F6 if the above doesn't work.
+"Usually because of plugins
+map <f6> :loadview<CR>
 
 " Use Vim settings
 set nocompatible
@@ -67,6 +70,7 @@ syntax enable
 set t_Co=256
 set background=dark
 "colorscheme solarized
+
 filetype on
 
 " Highlight column 81 if it goes over
@@ -130,6 +134,12 @@ set splitright
 " Remap for long lines
 nnoremap k gk
 nnoremap j gj
+
+" Unmap the above change for Quickfix windows
+augroup QuickFix
+     au FileType qf map <buffer> j j
+     au FileType qf map <buffer> k k
+augroup END
 
 " command to remove trailing spaces from file
 command ClearTrailing %s/\s\+$//e
