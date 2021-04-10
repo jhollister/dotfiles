@@ -9,21 +9,21 @@ Plug 'junegunn/vim-easy-align'
 Plug 'preservim/nerdtree'
 Plug 'tpope/vim-fugitive'
 Plug 'vim-latex/vim-latex'
-" TODO Should replace this, its outdated
+" TODO Should replace this, its outdated - fzf-vim?
 Plug 'kien/ctrlp.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'tpope/vim-surround'
 Plug 'roman/golden-ratio'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'jremmen/vim-ripgrep'
+Plug 'easymotion/vim-easymotion'
 
 " Open vimwiki with <Leader>ww
 Plug 'vimwiki/vimwiki'
 Plug 'tools-life/taskwiki'
 
-" Comment out lines with <Leader>cc
-" Toggle comments with <Leader>c<space>
-Plug 'preservim/nerdcommenter'
+" Comment with gc
+Plug 'tpope/vim-commentary'
 
 " Initialize plugin system
 call plug#end()
@@ -71,14 +71,11 @@ set t_Co=256
 set background=dark
 "colorscheme solarized
 
-filetype on
-
 " Highlight column 81 if it goes over
 highlight ColorColumn ctermbg=red
 call matchadd('ColorColumn', '\%81v', 100)
 
 " Enable file type detection and do language-dependent indenting.
-filetype plugin on
 filetype plugin indent on
 
 " Show line numbers
@@ -101,6 +98,9 @@ set autowrite
 
 " toggle paste mode when pasting with ctrl-v
 set pastetoggle=<f5>
+
+" paste from clipboard with Paste mode set
+map <Leader>p :set paste<CR>o<esc>"*p:set nopaste<cr>
 
 " easy buffer switching
 nnoremap <silent> [b :bprevious<CR>
