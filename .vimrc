@@ -2,7 +2,9 @@
 " - Avoid using standard Vim directory names like 'plugin'
 call plug#begin('~/.vim/plugged')
 
+"
 " Plugins go here
+" 
 " Make sure you use single quotes
 
 Plug 'junegunn/vim-easy-align'
@@ -17,6 +19,7 @@ Plug 'roman/golden-ratio'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'jremmen/vim-ripgrep'
 Plug 'easymotion/vim-easymotion'
+Plug 'justinmk/vim-sneak'
 
 " Open vimwiki with <Leader>ww
 Plug 'vimwiki/vimwiki'
@@ -25,6 +28,9 @@ Plug 'tools-life/taskwiki'
 " Comment with gc
 Plug 'tpope/vim-commentary'
 
+"
+" End Plugins
+"
 " Initialize plugin system
 call plug#end()
 

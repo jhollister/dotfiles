@@ -2,6 +2,7 @@
 # VERSION: 3.0
 SETUVAR --export EDITOR:vim
 SETUVAR __fish_initialized:3100
+SETUVAR _fish_abbr_cn:cargo\x20\x2bnightly
 SETUVAR _fish_abbr_gadd:git\x20add\x20\x2d\x2dall
 SETUVAR _fish_abbr_gs:git\x20status
 SETUVAR _fish_abbr_tt:taskwarrior\x2dtui
