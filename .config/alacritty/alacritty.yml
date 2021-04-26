@@ -47,6 +47,10 @@ font:
     size:
         16
 
+mouse:
+  # If this is `true`, the cursor is temporarily hidden when typing.
+  hide_when_typing: true
+
 # Colors (Monokai Pro)
 colors:
   # Default colors
