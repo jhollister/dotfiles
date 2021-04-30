@@ -1,14 +1,17 @@
 ### Environment variables ###
 
-set EBOOK_LIBRARY "$HOME/calibre"
+set -x EBOOK_LIBRARY "$HOME/calibre"
 
-set EDITOR "vim"
+set -x EDITOR "vim"
 
 # suppress fish intro message
 set fish_greeting
 
 ### Abbreviations ###
-abbr -a cn cargo nightly
+
+# cargo
+abbr -a cn 'cargo +nightly'
+abbr -a c 'cargo'
 
 # copy password to clipboard
 abbr -a pc pass -c
